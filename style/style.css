@@ -8,7 +8,7 @@ body{
     background: cornflowerblue;
     height: 100vh;
     width: 100vw;
-    
+    font-family: 'Lato', sans-serif;
 }
 
 #maincont{
@@ -22,4 +22,107 @@ body{
     top: 0;
     bottom: 0;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 30px;
+}
+
+#txt1{
+    font-weight: 900;
+    color: #3e3f53;
+    font-size: 18.5px;
+    margin-bottom: 4px;
+}
+#txt2{
+    color: #acadb8;
+    font-size: 12.5px;
+    font-weight: 500;
+    margin-bottom: 20.5px;
+}
+#txt3{
+    color: #3e3f53;
+    font-weight: 600;
+    width: 90%;
+    font-size: 12.5px;
+}
+#maincircle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#outercircle{
+    background-image: linear-gradient(to right,#09ccf9,#92fe9d);
+    border-radius: 100%;
+    height: calc(272px - 60px);
+    width: calc(272px - 60px);
+    /*padding-bottom: 100%;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    transition: all .3s ease;
+}
+#outercircle:hover{
+    transform: scale(1.1);
+}
+#middlecircle{
+    background: white;
+    /*height: calc(272px - 80px);
+    width: calc(272px - 80px);*/
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    padding: 20px;
+}
+#littlecircle{
+    background: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    -webkit-box-shadow: 2px 1px 26px -13px rgba(0,0,0,0.5);
+-moz-box-shadow: 2px 1px 26px -13px rgba(0,0,0,0.5);
+box-shadow: 2px 1px 26px -13px rgba(0,0,0,0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#moneytext {
+    font-weight: 900;
+    font-size: 1.5rem;
+    background: -webkit-linear-gradient(45deg,#09ccf9,#92fe9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#valuetext{
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+#mainconvert{
+    /*background: red;*/
+    /*padding:10%;*/
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: space-between;
+}
+.selector{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    
+}
+.selector label{
+    color: #acadb8;
+    font-size: .95rem;
+}
+.selector select{
+    border: none;
+    background-color: rgba(194, 201, 206, 0.5);
+    padding: 10px;
+    border-radius: 5px;
 }
