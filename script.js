@@ -7,13 +7,13 @@ let bruh = '';
 let btn = document.getElementById("strtbtn");
 //value.value = symb + "345";
 function sign(){
-    switch(symb){
+    switch(cto.value){
         case value = "usdollar":
-            bruh="$";alert("dlr"); break;
+            bruh="$"; break;
         case value = 'cadollar':
             bruh="CA$"; break;
         case value = 'euro':
-            bruh="$"; break;
+            bruh="E"; break;
         case value = 'pound':
             bruh="£"; break;
         case value = 'moroccan':
@@ -28,90 +28,35 @@ function sign(){
 //let bruh = sign();
 /*cto.addEventListener("change",sign());*/
 cto.addEventListener("change",tst=()=>{
-    symb = cto.value;
-    sign();
-    sym.innerHTML = bruh;
+    //symb = cto.value;
+    //sign();
+    sym.innerHTML = sign();
     //symb = sign(cto.value);
     //value.innerHTML = bruh + "345";
 });
 
 btn.addEventListener("click",convert=()=>{
+    let val = value.value;
     value.value = converter(value.value);
 })
-
+let val = value.value;
 converter=(a)=>{
     let result = 0;
     if (cfrom.value =="cadollar"){
-        switch(cto.value){
-            case value = "usdollar":
-                result = eval(a * 3); break;
-            case value = 'cadollar':
-                result = eval(a * 3); break;
-            case value = 'euro':
-                result = eval(a * 3); break;
-            case value = 'pound':
-                result = eval(a * 3); break;
-            case value = 'moroccan':
-                result = eval(a * 3); break;
-            case value = 'yen':
-                result = eval(a * 3); break;
-            default:
+            if(cto.value == "usdollar"){
                 result = eval(a * 3);
-        }
-    }
-    if (cfrom.value =="usdollar"){
-        switch(cto.value){
-            case value = "usdollar":
-                result = eval(a * 3); break;
-            case value = 'cadollar':
-                result = eval(a * 3); break;
-            case value = 'euro':
-                result = eval(a * 3); break;
-            case value = 'pound':
-                result = eval(a * 3); break;
-            case value = 'moroccan':
-                result = eval(a * 3); break;
-            case value = 'yen':
-                result = eval(a * 3); break;
-            default:
-                result = eval(a * 3);
-        }
-    }
-    if (cfrom.value =="pound"){
-        switch(cto.value){
-            case value = "usdollar":
-                result = eval(a * 3); break;
-            case value = 'cadollar':
-                result = eval(a * 3); break;
-            case value = 'euro':
-                result = eval(a * 3); break;
-            case value = 'pound':
-                result = eval(a * 3); break;
-            case value = 'moroccan':
-                result = eval(a * 3); break;
-            case value = 'yen':
-                result = eval(a * 3); break;
-            default:
-                result = eval(a * 3);
-        }
-    }
-    if (cfrom.value =="yen"){
-        switch(cto.value){
-            case value = "usdollar":
-                result = eval(a * 3); break;
-            case value = 'cadollar':
-                result = eval(a * 3); break;
-            case value = 'euro':
-                result = eval(a * 3); break;
-            case value = 'pound':
-                result = eval(a * 3); break;
-            case value = 'moroccan':
-                result = eval(a * 3); break;
-            case value = 'yen':
-                result = eval(a * 3); break;
-            default:
-                result = eval(a * 3);
-        }
+            }
+            if(cto.value == "cadollar"){
+                result = eval(a * 1);
+            }
+            else if(cto.value == "euro"){
+                result = eval(a * 3)}
+            else if(cto.value == "pound"){
+                result = eval(a * 3)}
+            else if(cto.value == "moroccan"){
+                result = eval(a * 3)}
+            else if(cto.value == "yen"){
+                result = eval(a * 3)}
     }
     return result;
 }
