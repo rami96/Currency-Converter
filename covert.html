@@ -10,7 +10,10 @@
 <body>
  <div id="maincont">
      <div id="maintext">
-         <h2 id="txt1">Money Converter</h2>
+         <div id="strt">
+             <h2 id="txt1">Money Converter</h2>
+             <div id="strtbtn"></div>
+            </div>
          <p id="txt2">Virtual App</p>
          <p id="txt3">Quickly convert your money
             online and quickly</p>
@@ -20,7 +23,11 @@
             <div id="middlecircle">
                 <div id="littlecircle">
                     <div id="textcircle">
-                        <p id="moneytext">$350</p>
+                        <!--<p id="moneytext">$350</p>-->
+                        <div id="symbmon">
+                            <p id="sym">$</p>
+                            <input type="text" id="moneytext" value="000">
+                        </div>
                         <p id="valuetext">Total Value</p>
                     </div>
                 </div>
@@ -34,16 +41,20 @@
                 <option value="usdollar">USD</option>
                 <option value="cadollar">CAD</option>
                 <option value="euro">EURO</option>
-                <option value="moroccan" selected>MAD</option>
+                <option value="pound" selected>GBP</option>
+                <option value="moroccan" >MAD</option>
+                <option value="yen" >YEN</option>
             </select>
          </div>
-         <div id="bottom" class="selector">
+         <div id="bottom" onchange="sign()" class="selector">
             <label for="">Convert To</label>
-            <select name="cfrom" id="cfrom" class="dropdown">
-               <option value="usdollar">USD</option>
-               <option value="cadollar">CAD</option>
-               <option value="euro">EURO</option>
-               <option value="dollar">MAD</option>
+            <select name="cto" id="cto" class="dropdown">
+                <option value="usdollar" selected>USD</option>
+                <option value="cadollar">CAD</option>
+                <option value="euro">EURO</option>
+                <option value="pound">GBP</option>
+                <option value="moroccan" >MAD</option>
+                <option value="yen" >YEN</option>
            </select>
          </div>
      </div>
